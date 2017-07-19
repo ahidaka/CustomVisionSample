@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="SampleAppUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SampleAppUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="buttonFileSelect" Content="File Select" Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="buttonFileSelect_Click" />
+        <TextBlock Grid.Row="1" x:Name="tbSelectedFileName" Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <StackPanel Grid.Row="2" Margin="2">
+            <TextBlock Text="URL:" FontSize="24"/>
+            <TextBox x:Name="tbImgURL" />
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="2">
+            <RadioButton x:Name="rbFile" Content="File" Click="rbFile_Click"/>
+            <RadioButton x:Name="rbURL" Content="URL" Click="rbFile_Click"/>
+        </StackPanel>
+        <Button x:Name="buttonAnalyze" Content="Analyze" Grid.Row="4" Margin="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="buttonAnalyze_Click" />
+        <TextBlock x:Name="tbResult" Grid.Row="5" Margin="2" TextWrapping="Wrap"/>
+    </Grid>
+</Page>
